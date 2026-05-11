@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashAdvance · Agencia digital para rent a cars de Gran Canaria</title>
+  <meta name="description" content="Marketing digital especializado en rent a cars de Gran Canaria. Web, reservas directas, reputación y email marketing. Auditoría gratuita.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DashAdvance · Agencia digital para rent a cars de Gran Canaria">
+  <meta property="og:description" content="Web, reservas directas, reputación y email marketing. Auditoría gratuita en 48h.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Favicons (sustituir cuando se generen) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Webfonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="brand">
+          <span class="brand-mark">DA</span>
+          <span>DashAdvance</span>
+        </a>
+        <div class="nav-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#programa">Programa</a>
+          <a href="#auditoria" class="nav-cta">
+            Auditoría gratis
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <canvas id="speedCanvas" class="speed-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow eyebrow">
+            <span class="dot"></span>
+            Agencia digital · Gran Canaria
+          </div>
+          <h1 class="hero-headline display">
+            Llenamos tu flota<br>sin depender<br>de <span class="strike italic">Rentalcars</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Web, reservas directas, reputación y email marketing para rent a cars de Gran Canaria. Más reservas propias, menos comisiones a intermediarios.
+          </p>
+          <div class="hero-actions">
+            <a href="#auditoria" class="btn btn-primary">
+              Solicitar auditoría gratuita
+              <span class="arrow">→</span>
+            </a>
+            <a href="#" class="btn btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+          <div class="hero-founders">
+            <div class="founders-avatars">
+              <div class="avatar">N1</div>
+              <div class="avatar">N2</div>
+            </div>
+            <div class="founders-text">
+              <strong>[Nombre 1] y [Nombre 2]</strong>
+              <span>Fundadores · Hablas con nosotros, no con un comercial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="dashboard">
+            <div class="dash-header">
+              <span class="dash-title">Rent-a-car · GC</span>
+              <span class="dash-live">EN VIVO</span>
+            </div>
+            <div class="dash-stats">
+              <div class="dash-stat">
+                <div class="dash-stat-label">Reservas web</div>
+                <div class="dash-stat-value">847 <span class="delta up">↑62%</span></div>
+              </div>
+              <div class="dash-stat">
+                <div class="dash-stat-label">Vía Rentalcars</div>
+                <div class="dash-stat-value">−24% <span class="delta down">↓</span></div>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar active"></div>
+              <div class="bar active"></div>
+              <div class="bar active"></div>
+              <div class="bar active"></div>
+            </div>
+            <div class="dash-rating">
+              <span class="star">★</span>
+              <strong>4,7</strong>
+              <span>· de 4,1 en 90 días</span>
+            </div>
+            <div class="dash-disclaimer">DATOS ILUSTRATIVOS · NO CLIENTE REAL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHATSAPP DEMO ================= -->
+  <section class="wa-demo" id="wa-demo">
+    <div class="wa-demo-bg"></div>
+    <div class="container">
+      <div class="wa-demo-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Demo en vivo · IA conversacional</div>
+        <h2 class="reveal">Tu chatbot vendiendo<br>mientras <em>duermes.</em></h2>
+        <p class="wa-demo-sub reveal">Así responde nuestra IA a un cliente de rent a car. Sin humanos. 24/7. En cualquier idioma.</p>
+      </div>
+
+      <div class="wa-demo-grid">
+        <div class="wa-phone reveal">
+          <div class="wa-phone-frame">
+            <div class="wa-phone-notch"></div>
+            <div class="wa-chat-header">
+              <div class="wa-chat-avatar">DA</div>
+              <div class="wa-chat-info">
+                <div class="wa-chat-name">Rent-a-car Bot · IA</div>
+                <div class="wa-chat-status"><span class="wa-online-dot"></span> en línea</div>
+              </div>
+              <div class="wa-chat-icons">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18"><path d="M15.5 6.5C15.5 8.43 13.93 10 12 10s-3.5-1.57-3.5-3.5S10.07 3 12 3s3.5 1.57 3.5 3.5zM12 12c-2.86 0-7 1.34-7 4v3h14v-3c0-2.66-4.14-4-7-4z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              </div>
+            </div>
+            <div class="wa-chat-body" id="waChatBody">
+              <div class="wa-date-badge">HOY</div>
+              <!-- los mensajes se insertan por JS -->
+            </div>
+            <div class="wa-chat-input">
+              <span>Mensaje</span>
+              <div class="wa-send-btn"><svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div>
+            </div>
+          </div>
+          <div class="wa-phone-shadow"></div>
+        </div>
+
+        <div class="wa-demo-content">
+          <div class="wa-feature reveal">
+            <div class="wa-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <div>
+              <h4>Responde en menos de 3 segundos</h4>
+              <p>El 78% de clientes elige al primero que responde. Nuestra IA está siempre.</p>
+            </div>
+          </div>
+          <div class="wa-feature reveal">
+            <div class="wa-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <h4>Cierra reservas automáticas</h4>
+              <p>Comprueba disponibilidad, propone vehículos, envía link de pago.</p>
+            </div>
+          </div>
+          <div class="wa-feature reveal">
+            <div class="wa-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <h4>Conecta con tu sistema de flota</h4>
+              <p>Calendarios, pagos y CRM sincronizados en tiempo real.</p>
+            </div>
+          </div>
+
+          <div class="wa-demo-cta reveal">
+            <p class="serif italic">"Tu empresa podría estar cerrando reservas mientras duermes."</p>
+            <a href="#auditoria" class="btn btn-primary">
+              Activar mi chatbot IA
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FILTRO ================= -->
+  <section class="filter">
+    <div class="container">
+      <div class="filter-grid">
+        <h2 class="reveal">Esto es <em>para ti</em><br>si...</h2>
+        <div>
+          <div class="filter-list">
+            <div class="filter-item reveal">
+              <span class="filter-num">01</span>
+              <p class="filter-text">Tienes un rent a car en <strong>Gran Canaria</strong> con entre 15 y 100 coches.</p>
+            </div>
+            <div class="filter-item reveal">
+              <span class="filter-num">02</span>
+              <p class="filter-text">Más de la mitad de tus reservas vienen de <strong>Rentalcars, DiscoverCars o Booking</strong>.</p>
+            </div>
+            <div class="filter-item reveal">
+              <span class="filter-num">03</span>
+              <p class="filter-text">Quieres construir <strong>una marca propia</strong>, no solo llenar coches.</p>
+            </div>
+          </div>
+          <div class="filter-conclusion reveal">
+            Si te identificas con dos de los tres, hablemos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROBLEMA ================= -->
+  <section class="problem">
+    <div class="container">
+      <div class="problem-inner">
+        <div class="eyebrow reveal"><span class="dot"></span> El problema</div>
+        <h2 class="reveal">El intermediario se queda<br>hasta el <span class="num">25%</span> de cada reserva.</h2>
+        <p class="problem-text reveal">
+          Cuando un turista aterriza en Las Palmas y alquila tu coche a través de una plataforma, tú pones la flota, el seguro, el mostrador, el riesgo y la atención. <strong>Ellos ponen una web.</strong> Y se llevan la comisión.
+        </p>
+        <p class="problem-quote reveal italic serif">
+          "El problema no es usar plataformas. El problema es depender solo de ellas."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CALCULADORA DE PÉRDIDAS ================= -->
+  <section class="calc" id="calculadora">
+    <div class="container">
+      <div class="calc-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Calculadora · Tiempo real</div>
+        <h2 class="reveal">¿Cuánto dinero estás<br><em>dejando sobre la mesa?</em></h2>
+        <p class="reveal">Mueve los controles. La cifra se actualiza al instante.</p>
+      </div>
+
+      <div class="calc-grid reveal">
+        <div class="calc-inputs">
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label>Clientes nuevos al mes</label>
+              <output id="calcClientsOut">180</output>
+            </div>
+            <input type="range" id="calcClients" min="30" max="800" value="180" step="10">
+            <div class="calc-range-labels"><span>30</span><span>800</span></div>
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label>Ticket medio por reserva (€)</label>
+              <output id="calcTicketOut">220</output>
+            </div>
+            <input type="range" id="calcTicket" min="60" max="600" value="220" step="10">
+            <div class="calc-range-labels"><span>60€</span><span>600€</span></div>
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label>Tiempo medio de respuesta</label>
+              <output id="calcResponseOut">45 min</output>
+            </div>
+            <input type="range" id="calcResponse" min="1" max="240" value="45" step="1">
+            <div class="calc-range-labels"><span>1 min</span><span>4 h</span></div>
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label>Leads perdidos por no responder a tiempo</label>
+              <output id="calcLostOut">35 %</output>
+            </div>
+            <input type="range" id="calcLost" min="5" max="80" value="35" step="1">
+            <div class="calc-range-labels"><span>5%</span><span>80%</span></div>
+          </div>
+        </div>
+
+        <div class="calc-output">
+          <div class="calc-output-card">
+            <div class="calc-output-label">ESTÁS DEJANDO DE GANAR</div>
+            <div class="calc-output-value">
+              <span id="calcResultMonth">13.860</span><em>€/mes</em>
+            </div>
+            <div class="calc-output-bars">
+              <div class="calc-bar">
+                <div class="calc-bar-label">Pérdida mensual</div>
+                <div class="calc-bar-track"><div class="calc-bar-fill" id="calcBarMonth"></div></div>
+              </div>
+              <div class="calc-bar">
+                <div class="calc-bar-label">Pérdida anual</div>
+                <div class="calc-bar-track"><div class="calc-bar-fill bad" id="calcBarYear"></div></div>
+              </div>
+            </div>
+            <div class="calc-output-grid">
+              <div>
+                <div class="calc-mini-label">AL AÑO</div>
+                <div class="calc-mini-value" id="calcResultYear">166.320€</div>
+              </div>
+              <div>
+                <div class="calc-mini-label">RESERVAS PERDIDAS/MES</div>
+                <div class="calc-mini-value" id="calcResultBookings">63</div>
+              </div>
+            </div>
+            <div class="calc-disclaimer">ESTIMACIÓN BASADA EN BENCHMARKS DEL SECTOR · GRAN CANARIA</div>
+          </div>
+          <a href="#auditoria" class="btn btn-primary calc-cta">
+            Recuperar este dinero
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LO QUE PIERDES ================= -->
+  <section class="losses">
+    <div class="losses-bg"></div>
+    <div class="container">
+      <div class="losses-header">
+        <div class="eyebrow reveal"><span class="dot dot-red"></span> Lo que pierdes si no actúas</div>
+        <h2 class="reveal">Cada día que pasa,<br><em>estás dejando dinero sobre la mesa.</em></h2>
+      </div>
+      <div class="losses-grid">
+        <div class="loss-card reveal">
+          <div class="loss-icon">→</div>
+          <h3>Clientes que reservan con la competencia</h3>
+          <p>Tu vecino respondió antes. Esa reserva ya no era tuya.</p>
+          <div class="loss-meta">−4 reservas/semana</div>
+        </div>
+        <div class="loss-card reveal">
+          <div class="loss-icon">→</div>
+          <h3>Leads ignorados fuera de horario</h3>
+          <p>El 62% de mensajes llegan entre las 19h y las 9h. Nadie los lee.</p>
+          <div class="loss-meta">−62% de oportunidades</div>
+        </div>
+        <div class="loss-card reveal">
+          <div class="loss-icon">→</div>
+          <h3>Tiempo perdido respondiendo manual</h3>
+          <p>4 horas al día contestando lo mismo: "¿está disponible?", "¿precio?", "¿automático?".</p>
+          <div class="loss-meta">−20h/semana</div>
+        </div>
+        <div class="loss-card reveal">
+          <div class="loss-icon">→</div>
+          <h3>Campañas mal optimizadas</h3>
+          <p>Pagas por clics que no convierten. Sin IA, no escala.</p>
+          <div class="loss-meta">−38% ROAS medio</div>
+        </div>
+        <div class="loss-card reveal">
+          <div class="loss-icon">→</div>
+          <h3>Dinero desperdiciado en intermediarios</h3>
+          <p>El 25% de cada reserva se va a Rentalcars, Booking, Discovercars.</p>
+          <div class="loss-meta">−25% del margen</div>
+        </div>
+        <div class="loss-card reveal">
+          <div class="loss-icon">→</div>
+          <h3>Baja conversión web</h3>
+          <p>Visitas que llegan, miran y se van. Sin sistema de captación.</p>
+          <div class="loss-meta">1,2% conversión media</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LO QUE GANAS ================= -->
+  <section class="wins">
+    <div class="wins-bg"></div>
+    <div class="container">
+      <div class="wins-header">
+        <div class="eyebrow reveal"><span class="dot dot-green"></span> Lo que ganas con nosotros</div>
+        <h2 class="reveal">Transformamos tráfico<br>en <em>reservas automáticas.</em></h2>
+      </div>
+      <div class="wins-grid">
+        <div class="win-card reveal">
+          <div class="win-metric"><span class="win-num" data-target="340">0</span><em>%</em></div>
+          <h3>Más reservas automáticas</h3>
+          <p>Sistema de captación 24/7 con IA + automatizaciones.</p>
+        </div>
+        <div class="win-card reveal">
+          <div class="win-metric"><span class="win-num" data-target="3">0</span><em>s</em></div>
+          <h3>Respuesta instantánea 24/7</h3>
+          <p>Cliente preguntando a las 2:00 AM, reserva cerrada a las 2:01.</p>
+        </div>
+        <div class="win-card reveal">
+          <div class="win-metric"><span class="win-num" data-target="62">0</span><em>%</em></div>
+          <h3>Más ingresos mensuales</h3>
+          <p>Recuperas las reservas que antes ibas perdiendo cada día.</p>
+        </div>
+        <div class="win-card reveal">
+          <div class="win-metric"><span class="win-num" data-target="100">0</span><em>%</em></div>
+          <h3>Menos trabajo manual</h3>
+          <p>Tu equipo deja de responder lo mismo y se dedica a vender.</p>
+        </div>
+        <div class="win-card reveal">
+          <div class="win-metric"><span class="win-num" data-target="5">0</span><em>x</em></div>
+          <h3>Escalabilidad real</h3>
+          <p>Sistema que crece sin contratar 10 personas más.</p>
+        </div>
+        <div class="win-card reveal">
+          <div class="win-metric"><span class="win-num" data-target="20">0</span><em>h</em></div>
+          <h3>Más tiempo libre</h3>
+          <p>Recuperas tu semana. El sistema trabaja por ti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECNOLOGÍA ================= -->
+  <section class="tech">
+    <div class="container">
+      <div class="tech-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Tecnología que utilizamos</div>
+        <h2 class="reveal">Construido con las<br>mejores <em>herramientas del mundo.</em></h2>
+        <p class="reveal">Combinamos publicidad, automatización e inteligencia artificial para crear sistemas que generan clientes automáticamente.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card reveal" data-tech="Meta">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/><path d="M16 10c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.9 1.3 3.4 3 3.9V18h2v-4.1c1.7-.5 3-2 3-3.9z"/></svg></div>
+          <div class="tech-name">Meta Ads</div>
+          <div class="tech-tag">PUBLICIDAD</div>
+        </div>
+        <div class="tech-card reveal" data-tech="TikTok">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.16a8.16 8.16 0 005 1.57V6.31a4.85 4.85 0 01-1.07-.62z"/></svg></div>
+          <div class="tech-name">TikTok Ads</div>
+          <div class="tech-tag">PUBLICIDAD</div>
+        </div>
+        <div class="tech-card reveal" data-tech="Google">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/></svg></div>
+          <div class="tech-name">Google Ads</div>
+          <div class="tech-tag">PUBLICIDAD</div>
+        </div>
+        <div class="tech-card reveal" data-tech="n8n">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M9 12h6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+          <div class="tech-name">n8n</div>
+          <div class="tech-tag">AUTOMATIZACIÓN</div>
+        </div>
+        <div class="tech-card reveal" data-tech="Claude">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L19.5 8 12 11.82 4.5 8 12 4.18zM4 9.5l7 3.5v7.18l-7-3.5V9.5zm9 10.68V13l7-3.5v7.18l-7 3.5z"/></svg></div>
+          <div class="tech-name">Claude AI</div>
+          <div class="tech-tag">IA</div>
+        </div>
+        <div class="tech-card reveal" data-tech="OpenAI">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-2.2-1.2-4.1-3-5.2.3-2.1-.4-4.3-2-5.8-1.5-1.6-3.7-2.3-5.8-2-1.1-1.8-3-3-5.2-3-2.2 0-4.1 1.2-5.2 3-2.1-.3-4.3.4-5.8 2C-.6 2.5-1.3 4.7-1 6.8c-1.8 1.1-3 3-3 5.2 0 2.2 1.2 4.1 3 5.2-.3 2.1.4 4.3 2 5.8 1.5 1.6 3.7 2.3 5.8 2 1.1 1.8 3 3 5.2 3 2.2 0 4.1-1.2 5.2-3 2.1.3 4.3-.4 5.8-2 1.6-1.5 2.3-3.7 2-5.8 1.8-1.1 3-3 3-5.2z"/></svg></div>
+          <div class="tech-name">OpenAI</div>
+          <div class="tech-tag">IA</div>
+        </div>
+        <div class="tech-card reveal" data-tech="WhatsApp">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22c-1.7 0-3.4-.5-4.9-1.3l-.3-.2-3.6 1 1-3.5-.2-.4C3.1 16 2.6 14.1 2.6 12.1c0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.1 2.8 6.6 0 5.2-4.3 9.4-9.5 9.4M20.5 3.4C18.3 1.2 15.3 0 12.1 0 5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4"/></svg></div>
+          <div class="tech-name">WhatsApp API</div>
+          <div class="tech-tag">MENSAJERÍA</div>
+        </div>
+        <div class="tech-card reveal" data-tech="AI">
+          <div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></div>
+          <div class="tech-name">Automatizaciones IA</div>
+          <div class="tech-tag">CORE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARATIVA ================= -->
+  <section class="compare">
+    <div class="container">
+      <div class="compare-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Comparativa</div>
+        <h2 class="reveal">No somos otra agencia.<br><em>Compáralo tú mismo.</em></h2>
+      </div>
+      <div class="compare-table reveal">
+        <div class="compare-row compare-head">
+          <div class="compare-cell-feat">CARACTERÍSTICA</div>
+          <div class="compare-cell">Agencia tradicional</div>
+          <div class="compare-cell">Freelancer suelto</div>
+          <div class="compare-cell">Equipo in-house</div>
+          <div class="compare-cell us">
+            <span class="us-badge">DASHADVANCE</span>
+          </div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-cell-feat">Velocidad de entrega</div>
+          <div class="compare-cell"><span class="bad">Lenta</span></div>
+          <div class="compare-cell"><span class="medium">Media</span></div>
+          <div class="compare-cell"><span class="bad">Muy lenta</span></div>
+          <div class="compare-cell us"><span class="good">Rápida</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Automatización con IA</div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell us"><span class="check">✓</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Coste mensual</div>
+          <div class="compare-cell"><span class="bad">Alto</span></div>
+          <div class="compare-cell"><span class="medium">Variable</span></div>
+          <div class="compare-cell"><span class="bad">Muy alto</span></div>
+          <div class="compare-cell us"><span class="good">Justo</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Escalabilidad</div>
+          <div class="compare-cell"><span class="medium">Limitada</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="medium">Lenta</span></div>
+          <div class="compare-cell us"><span class="check">✓</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Contenido real con filmmaker</div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell us"><span class="check">✓</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Gestión de anuncios</div>
+          <div class="compare-cell"><span class="check-soft">✓</span></div>
+          <div class="compare-cell"><span class="medium">Básica</span></div>
+          <div class="compare-cell"><span class="medium">Variable</span></div>
+          <div class="compare-cell us"><span class="check">✓ Avanzada</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Disponibilidad 24/7</div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell us"><span class="check">✓ IA siempre activa</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Resultados medibles</div>
+          <div class="compare-cell"><span class="medium">A veces</span></div>
+          <div class="compare-cell"><span class="medium">Difícil</span></div>
+          <div class="compare-cell"><span class="check-soft">✓</span></div>
+          <div class="compare-cell us"><span class="check">✓ Dashboard live</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell-feat">Optimización continua</div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="x">✕</span></div>
+          <div class="compare-cell"><span class="medium">Lenta</span></div>
+          <div class="compare-cell us"><span class="check">✓ Con IA</span></div>
+        </div>
+      </div>
+      <div class="compare-cta reveal">
+        <a href="#auditoria" class="btn btn-primary">Quiero esto para mi rent a car<span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="services-header">
+        <div>
+          <div class="eyebrow reveal" style="margin-bottom:24px;"><span class="dot"></span> Lo que hacemos</div>
+          <h2 class="reveal">Tres palancas.<br><em>Sin más.</em></h2>
+        </div>
+        <p class="reveal">Vendemos solo lo que sabemos hacer hoy con garantías. Cuando ampliemos servicios, los activaremos para los clientes existentes primero.</p>
+      </div>
+
+      <div class="service-list">
+        <div class="service reveal">
+          <span class="service-num">01 / Web</span>
+          <div class="service-title">
+            <h3>Tu web vendiendo sola.</h3>
+            <p>Web + sistema de reservas directas</p>
+          </div>
+          <div class="service-body">
+            <p>Diseñamos y desarrollamos la web de tu rent a car con motor de reservas integrado, pagos online y disponibilidad en tiempo real. Multilingüe, optimizada para móvil.</p>
+            <ul class="service-features">
+              <li>Diseño y desarrollo en Framer</li>
+              <li>Motor de reservas integrado con tu gestión de flota</li>
+              <li>Pasarela de pago directa</li>
+              <li>Versión española, inglesa y alemana</li>
+            </ul>
+          </div>
+          <span class="service-arrow">→</span>
+        </div>
+
+        <div class="service reveal">
+          <span class="service-num">02 / Reputación</span>
+          <div class="service-title">
+            <h3>Reputación que vende.</h3>
+            <p>Google Business · reseñas · presencia local</p>
+          </div>
+          <div class="service-body">
+            <p>Gestionamos tu Google Business, tus reseñas y tu presencia local. La diferencia entre 4,1 y 4,7 estrellas son cientos de reservas al año.</p>
+            <ul class="service-features">
+              <li>Optimización de Google Business Profile</li>
+              <li>Estrategia activa de captación de reseñas</li>
+              <li>Respuestas profesionales a cada reseña</li>
+              <li>Posicionamiento en Google Maps</li>
+            </ul>
+          </div>
+          <span class="service-arrow">→</span>
+        </div>
+
+        <div class="service reveal">
+          <span class="service-num">03 / Email</span>
+          <div class="service-title">
+            <h3>Email que recupera.</h3>
+            <p>Automatizaciones · clientes pasados</p>
+          </div>
+          <div class="service-body">
+            <p>El cliente que ya te alquiló es tu reserva más barata. Montamos automatizaciones para recuperarlo cuando vuelva, recoger reseñas tras cada alquiler y mantener tu marca presente.</p>
+            <ul class="service-features">
+              <li>Setup de plataforma (Brevo, Mailerlite, ActiveCampaign)</li>
+              <li>Automatizaciones de bienvenida y reactivación</li>
+              <li>Captación de email en cada reserva</li>
+              <li>Segmentación por nacionalidad y temporada</li>
+            </ul>
+          </div>
+          <span class="service-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="services-footer reveal">
+        <strong>También trabajamos campañas de Meta Ads, Google Ads y SEO local.</strong> Ahora estamos completando las certificaciones oficiales de Meta y Google. Cuando los activemos, los avisamos a nuestros clientes primero.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS IA ================= -->
+  <section class="services-ai">
+    <div class="container">
+      <div class="services-ai-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Servicios premium · IA + Automatización</div>
+        <h2 class="reveal">Tres sistemas. <em>Resultados predecibles.</em></h2>
+        <p class="reveal">Combinamos publicidad, automatización e inteligencia artificial para crear máquinas que generan reservas mientras tú duermes.</p>
+      </div>
+      <div class="services-ai-grid">
+        <div class="ai-card reveal">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-top">
+            <div class="ai-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <span class="ai-badge">24/7 · IA</span>
+          </div>
+          <h3>Captador 24/7 con IA</h3>
+          <p>Chatbot inteligente de WhatsApp que responde automáticamente, califica leads y convierte clientes en reservas sin intervención humana.</p>
+          <ul class="ai-features">
+            <li>Respuesta &lt; 3 segundos</li>
+            <li>Multi-idioma (ES, EN, DE, FR)</li>
+            <li>Conexión a tu flota en vivo</li>
+            <li>Cierre con link de pago automático</li>
+          </ul>
+        </div>
+
+        <div class="ai-card reveal featured">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-top">
+            <div class="ai-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span class="ai-badge">CORE</span>
+          </div>
+          <h3>Motor de anuncios con IA</h3>
+          <p>Campañas avanzadas en Meta Ads, Google Ads y TikTok Ads optimizadas constantemente con IA para generar reservas de forma predecible.</p>
+          <ul class="ai-features">
+            <li>Optimización 24/7 con algoritmos propios</li>
+            <li>Creativos generados con IA</li>
+            <li>Test A/B continuos automáticos</li>
+            <li>Dashboard de ROAS en tiempo real</li>
+          </ul>
+        </div>
+
+        <div class="ai-card reveal">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-top">
+            <div class="ai-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4V8z"/></svg>
+            </div>
+            <span class="ai-badge">MENSUAL</span>
+          </div>
+          <h3>Contenido real con filmmaker</h3>
+          <p>Visitamos tu flota una vez al mes para grabar Reels, testimonios reales, vlogs, contenido cinematic y material para anuncios.</p>
+          <ul class="ai-features">
+            <li>Sesión mensual con filmmaker</li>
+            <li>Reels, testimonios y vlogs</li>
+            <li>Material listo para Meta y TikTok Ads</li>
+            <li>Estética cinematic premium</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESO ================= -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <div class="process-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Cómo trabajamos</div>
+        <h2 class="reveal">Cuatro pasos.<br><em>Sin sorpresas.</em></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-num">01<span class="step-time">48h</span></div>
+          <h3>Auditoría</h3>
+          <p>Analizamos tu web, Google Business, reseñas y posicionamiento. Te entregamos un PDF con diagnóstico y plan de acción priorizado.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">02<span class="step-time">5 días</span></div>
+          <h3>Propuesta</h3>
+          <p>Si encajamos, te enviamos servicios concretos, inversión y previsión de resultados a 90 días.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">03<span class="step-time">2-6 sem</span></div>
+          <h3>Ejecución</h3>
+          <p>El primer mes setup y baseline. A partir del segundo, optimización continua y reportes mensuales.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">04<span class="step-time">30 min</span></div>
+          <h3>Seguimiento</h3>
+          <p>Reunión mensual contigo. Revisamos números, decidimos siguientes pasos. Sin permanencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= QUIÉNES SOMOS ================= -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-portrait reveal">
+          <div class="portrait-placeholder">
+            <div class="portrait-circle">N1</div>
+            <div class="portrait-circle">N2</div>
+          </div>
+          <div class="label">
+            <span>FUNDADORES</span>
+            <span>LAS PALMAS · GC</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="eyebrow reveal"><span class="dot"></span> Quiénes somos</div>
+          <h2 class="reveal">[Nombre 1] y <em>[Nombre 2]</em>.</h2>
+          <p class="reveal">
+            <strong>Dos socios fundadores en Gran Canaria.</strong> Estamos creando la primera agencia digital especializada solo en rent a cars de la isla.
+          </p>
+          <p class="reveal">
+            Para cada proyecto montamos un equipo a medida con colaboradores especialistas (diseño, vídeo, traducción, fotografía) según las necesidades concretas. <strong>Tú hablas siempre con nosotros dos.</strong> No hay account managers ni intermediarios.
+          </p>
+          <p class="reveal">
+            Arrancamos DashAdvance porque vimos lo mismo en cada rent a car con el que hablábamos: flotas llenas en agosto, vacías en noviembre, y comisiones del 25% comiéndose el margen los doce meses del año. Eso lo podemos cambiar.
+          </p>
+          <div class="about-meta">
+            <div class="about-meta-item">
+              <div class="label">Especialización</div>
+              <div class="value">Rent a cars de Gran Canaria</div>
+            </div>
+            <div class="about-meta-item">
+              <div class="label">Modelo</div>
+              <div class="value">Sin permanencia · mes a mes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROGRAMA FUNDACIONAL ================= -->
+  <section class="founders-program" id="programa">
+    <div class="container">
+      <div class="fp-grid">
+        <div class="fp-content">
+          <div class="eyebrow reveal"><span class="dot"></span> Programa fundacional</div>
+          <h2 class="reveal">Buscamos a nuestros<br><em>5 primeros clientes</em>.</h2>
+          <p class="reveal">
+            Estamos arrancando. Buscamos cinco rent a cars en Gran Canaria que confíen en nosotros desde el principio.
+          </p>
+          <ul class="fp-list reveal">
+            <li>Tarifa fundacional, por debajo del precio de mercado</li>
+            <li>Atención directa de los fundadores (no la perderás cuando crezcamos)</li>
+            <li>Trabajo intensivo: queremos que vuestros casos sean nuestros primeros casos de éxito públicos</li>
+          </ul>
+        </div>
+        <div class="fp-counter reveal">
+          <div class="fp-counter-label">Plazas disponibles</div>
+          <div class="fp-counter-num">5<span>/5</span></div>
+          <div class="fp-counter-text">Actualizamos este contador manualmente cuando se cubren plazas.</div>
+          <a href="#auditoria" class="btn btn-primary">
+            Solicitar auditoría
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MERCADO ================= -->
+  <section class="market">
+    <div class="container">
+      <div class="market-header">
+        <div class="eyebrow reveal"><span class="dot"></span> Mercado de Gran Canaria</div>
+        <h2 class="reveal">Lo que sabemos<br>de la isla.</h2>
+        <p class="reveal">Llevamos meses estudiando este sector específicamente. Estos son algunos de los datos que más nos importan.</p>
+      </div>
+      <div class="market-stats">
+        <div class="market-stat reveal">
+          <div class="market-stat-num">4,3<em>M</em></div>
+          <div class="market-stat-label">turistas en Gran Canaria en 2024</div>
+        </div>
+        <div class="market-stat reveal">
+          <div class="market-stat-num">~50<em>%</em></div>
+          <div class="market-stat-label">alquilan coche durante su estancia</div>
+        </div>
+        <div class="market-stat reveal">
+          <div class="market-stat-num">18-27<em>%</em></div>
+          <div class="market-stat-label">comisión media de las plataformas</div>
+        </div>
+        <div class="market-stat reveal">
+          <div class="market-stat-num">4,2<em>★</em></div>
+          <div class="market-stat-label">media de estrellas de los rent a cars de la isla</div>
+        </div>
+      </div>
+      <p class="market-conclusion reveal">
+        No conocemos al cliente que alquila tu coche por experiencia de años. Conocemos los datos, las búsquedas, las plataformas, las temporadas y los competidores como nadie. <em>Y eso es lo que necesitas para que las reservas dejen de pasar por terceros.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= AUDITORÍA ================= -->
+  <section class="audit" id="auditoria">
+    <div class="container">
+      <div class="audit-grid">
+        <div>
+          <div class="eyebrow reveal"><span class="dot"></span> Auditoría gratuita · 48h · Sin compromiso</div>
+          <h2 class="reveal">Te decimos qué te<br>está costando dinero<br><em>ahora mismo.</em></h2>
+          <p class="audit-text reveal">Te entregamos un PDF de 12 páginas con análisis profundo de tu presencia digital y un plan de acción priorizado.</p>
+          <ul class="audit-features reveal">
+            <li>Análisis de tu web y proceso de reserva actual</li>
+            <li>Estado de Google Business y reseñas vs. competencia</li>
+            <li>Estimación de cuánto pierdes al año en comisiones</li>
+            <li>Plan de acción priorizado a 90 días</li>
+          </ul>
+          <a href="#" class="btn btn-primary reveal">
+            Solicitar auditoría
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="audit-pdf-mock reveal">
+          <div class="pdf-cover">
+            <div class="pdf-brand">
+              <span class="pdf-brand-mark">DA</span>
+              DashAdvance
+            </div>
+            <div>
+              <div class="pdf-tag">Auditoría Digital · Rent a Car</div>
+              <div class="pdf-title">
+                Análisis<br>
+                digital de<br>
+                <em>tu rent a car.</em>
+              </div>
+            </div>
+            <div class="pdf-meta">
+              <span>12 páginas</span>
+              <span>Confidencial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <h2 class="reveal">Preguntas<br><em>frecuentes.</em></h2>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-q">¿Cuánto cuesta trabajar con vosotros? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">Depende del servicio. Como estamos en programa fundacional, nuestros precios están entre un 30 y un 50% por debajo del mercado. La auditoría gratuita incluye una propuesta con cifras concretas adaptadas a tu rent a car.</div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">¿En cuánto tiempo veo resultados? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">Web nueva: 4-6 semanas hasta tenerla en marcha. Reputación y reseñas: cambios visibles en 60-90 días. Email marketing: las primeras reservas recuperadas suelen llegar en el primer mes.</div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">¿Trabajáis con flotas pequeñas? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">Trabajamos con flotas a partir de 15 coches. Por debajo de eso, nuestros servicios no son rentables para el cliente.</div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">¿Hay permanencia? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">No. Trabajamos mes a mes. Si en algún momento dejamos de aportar, no te quedas atado.</div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">¿En qué islas trabajáis? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">Solo Gran Canaria. Es deliberado. Queremos ser los mejores en una isla antes de plantearnos las demás.</div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">¿Sois una agencia grande? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">No. Somos dos socios en Las Palmas. Para cada proyecto montamos un equipo con colaboradores especialistas según lo que necesite el cliente. Si buscas una agencia con 20 personas y oficina en Madrid, no somos nosotros.</div></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">¿Por qué no hacéis Meta Ads o Google Ads todavía? <span class="icon">+</span></button>
+            <div class="faq-a"><div class="faq-a-content">Porque preferimos certificarnos oficialmente antes de gestionar el dinero publicitario de un cliente. Estamos en ello. Cuando los activemos, los clientes existentes serán los primeros en saberlo.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="eyebrow reveal"><span class="dot"></span> El siguiente paso</div>
+      <h2 class="reveal">Una llamada.<br>30 minutos.<br><em>Salimos con un plan.</em></h2>
+      <p class="final-cta-text reveal">
+        Te decimos qué estás perdiendo, qué se puede recuperar y cómo. Si encajamos, trabajamos. Si no, te llevas las ideas.
+      </p>
+      <div class="final-cta-buttons reveal">
+        <a href="#" class="btn btn-primary">
+          Reservar llamada
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="btn btn-secondary">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand serif italic">DashAdvance.</div>
+          <p class="footer-brand-tag">Agencia digital especializada en rent a cars de Gran Canaria.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Web + reservas</a></li>
+            <li><a href="#servicios">Reputación</a></li>
+            <li><a href="#servicios">Email marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#programa">Programa fundacional</a></li>
+            <li><a href="#proceso">Cómo trabajamos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="mailto:hola@dashadvance.es">hola@dashadvance.es</a></li>
+            <li><a href="#auditoria">Auditoría gratis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 DASHADVANCE · LAS PALMAS DE GRAN CANARIA</span>
+        <span><a href="#">AVISO LEGAL</a> · <a href="#">PRIVACIDAD</a> · <a href="#">COOKIES</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= WHATSAPP FLOATING ================= -->
+  <a href="#" class="wa-float" id="waFloat" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Three.js para la animación de velocidad del hero -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
