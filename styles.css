@@ -947,6 +947,11 @@ button { font-family:inherit; cursor:pointer; border:none; background:none; colo
   .wa-float { bottom: 20px; right: 20px; }
 }
 
+/* ── NAV ANCHOR OFFSET (fixed header compensation) ──────────────────────── */
+#servicios, #proceso, #nosotros, #programa, #auditoria, #wa-demo, #calculadora {
+  scroll-margin-top: 88px;
+}
+
 /* ── SCROLL REVEAL ───────────────────────────────────────────────────────── */
 .reveal { opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.visible { opacity:1; transform:translateY(0); }

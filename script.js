@@ -31,7 +31,6 @@
     precio:      'Depende del servicio. Como estamos en programa fundacional, nuestros precios están entre un 30 y un 50% por debajo del mercado. La auditoría gratuita incluye una propuesta con cifras concretas adaptadas a tu rent a car.',
     resultados:  'Web nueva: 4-6 semanas hasta tenerla en marcha. Reputación y reseñas: cambios visibles en 60-90 días. Email marketing: las primeras reservas recuperadas suelen llegar en el primer mes.',
     flota:       'Trabajamos con flotas a partir de 15 coches. Por debajo de eso, nuestros servicios no son rentables para el cliente.',
-    permanencia: 'No. Trabajamos mes a mes. Si en algún momento dejamos de aportar, no te quedas atado.',
     islas:       'Solo Gran Canaria. Es deliberado. Queremos ser los mejores en una isla antes de plantearnos las demás.',
     tamano:      'No. Somos dos socios en Las Palmas. Para cada proyecto montamos un equipo con colaboradores especialistas. Si buscas una agencia con 20 personas y oficina en Madrid, no somos nosotros.',
     ads:         'Porque preferimos certificarnos oficialmente antes de gestionar el dinero publicitario de un cliente. Estamos en ello. Cuando los activemos, los clientes existentes serán los primeros en saberlo.'
