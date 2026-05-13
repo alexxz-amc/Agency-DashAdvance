@@ -941,44 +941,6 @@
     </div>
   </section>
 
-  <!-- ================= FAQ ================= -->
-  <section class="faq">
-    <div class="container">
-      <div class="faq-grid">
-        <h2 class="reveal">Preguntas<br><em>frecuentes.</em></h2>
-        <div class="faq-list">
-          <div class="faq-item reveal">
-            <button class="faq-q">¿Cuánto cuesta trabajar con vosotros? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">Depende del servicio. Como estamos en programa fundacional, nuestros precios están entre un 30 y un 50% por debajo del mercado. La auditoría gratuita incluye una propuesta con cifras concretas adaptadas a tu rent a car.</div></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">¿En cuánto tiempo veo resultados? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">Web nueva: 4-6 semanas hasta tenerla en marcha. Reputación y reseñas: cambios visibles en 60-90 días. Email marketing: las primeras reservas recuperadas suelen llegar en el primer mes.</div></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">¿Trabajáis con flotas pequeñas? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">Trabajamos con flotas a partir de 15 coches. Por debajo de eso, nuestros servicios no son rentables para el cliente.</div></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">¿Hay permanencia? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">No. Trabajamos mes a mes. Si en algún momento dejamos de aportar, no te quedas atado.</div></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">¿En qué islas trabajáis? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">Solo Gran Canaria. Es deliberado. Queremos ser los mejores en una isla antes de plantearnos las demás.</div></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">¿Sois una agencia grande? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">No. Somos dos socios en Las Palmas. Para cada proyecto montamos un equipo con colaboradores especialistas según lo que necesite el cliente. Si buscas una agencia con 20 personas y oficina en Madrid, no somos nosotros.</div></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">¿Por qué no hacéis Meta Ads o Google Ads todavía? <span class="icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-content">Porque preferimos certificarnos oficialmente antes de gestionar el dinero publicitario de un cliente. Estamos en ello. Cuando los activemos, los clientes existentes serán los primeros en saberlo.</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ================= FINAL CTA ================= -->
   <section class="final-cta">
@@ -1039,6 +1001,44 @@
       </div>
     </div>
   </footer>
+
+  <!-- ================= CHATBOT ROBOT FLOTANTE ================= -->
+  <div class="bot-float-container" id="botFloatContainer">
+    <div class="bot-popup" id="botPopup" role="dialog" aria-label="Chat IA DashAdvance">
+      <div class="bot-popup-header">
+        <div class="bot-popup-title">
+          <div class="bot-mini-eyes">
+            <span class="bot-blink-dot"></span>
+            <span class="bot-blink-dot"></span>
+          </div>
+          DashAdvance IA
+        </div>
+        <button class="bot-popup-close" id="botPopupClose" aria-label="Cerrar">×</button>
+      </div>
+      <div class="bot-popup-body" id="botPopupBody">
+        <div class="bot-bubble bot-says">Hola 👋 Soy el asistente de DashAdvance. ¿En qué puedo ayudarte?</div>
+        <div class="bot-questions" id="botQuestions">
+          <button class="bot-q-btn" data-q="precio">¿Cuánto cuesta trabajar con vosotros?</button>
+          <button class="bot-q-btn" data-q="resultados">¿En cuánto tiempo veo resultados?</button>
+          <button class="bot-q-btn" data-q="flota">¿Trabajáis con flotas pequeñas?</button>
+          <button class="bot-q-btn" data-q="permanencia">¿Hay permanencia?</button>
+          <button class="bot-q-btn" data-q="islas">¿En qué islas trabajáis?</button>
+          <button class="bot-q-btn" data-q="tamano">¿Sois una agencia grande?</button>
+          <button class="bot-q-btn" data-q="ads">¿Por qué no hacéis Meta Ads todavía?</button>
+        </div>
+      </div>
+    </div>
+    <button class="bot-float" id="botFloatBtn" aria-label="Abrir chatbot IA">
+      <div class="bot-face">
+        <div class="bot-antenna"></div>
+        <div class="bot-eyes">
+          <div class="bot-eye"></div>
+          <div class="bot-eye"></div>
+        </div>
+        <div class="bot-mouth"></div>
+      </div>
+    </button>
+  </div>
 
   <!-- ================= WHATSAPP FLOATING ================= -->
   <a href="#" class="wa-float" id="waFloat" aria-label="WhatsApp DashAdvance">

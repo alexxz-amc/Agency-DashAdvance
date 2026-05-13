@@ -16,25 +16,89 @@
   // 1. Header scroll effect + WhatsApp float visibility
   // --------------------------------------------------------------------
   const header = document.getElementById('header');
-  const waFloat = document.getElementById('waFloat');
 
   function handleScroll() {
-    const scrolled = window.scrollY > 60;
-    if (header) header.classList.toggle('scrolled', scrolled);
-    if (waFloat) waFloat.classList.toggle('visible', window.scrollY > 600);
+    if (header) header.classList.toggle('scrolled', window.scrollY > 60);
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll(); // estado inicial
+  handleScroll();
 
   // --------------------------------------------------------------------
-  // 2. FAQ toggles
+  // 2. Robot chatbot FAQ
   // --------------------------------------------------------------------
-  document.querySelectorAll('.faq-q').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      btn.parentElement.classList.toggle('open');
+  var ANSWERS = {
+    precio:      'Depende del servicio. Como estamos en programa fundacional, nuestros precios están entre un 30 y un 50% por debajo del mercado. La auditoría gratuita incluye una propuesta con cifras concretas adaptadas a tu rent a car.',
+    resultados:  'Web nueva: 4-6 semanas hasta tenerla en marcha. Reputación y reseñas: cambios visibles en 60-90 días. Email marketing: las primeras reservas recuperadas suelen llegar en el primer mes.',
+    flota:       'Trabajamos con flotas a partir de 15 coches. Por debajo de eso, nuestros servicios no son rentables para el cliente.',
+    permanencia: 'No. Trabajamos mes a mes. Si en algún momento dejamos de aportar, no te quedas atado.',
+    islas:       'Solo Gran Canaria. Es deliberado. Queremos ser los mejores en una isla antes de plantearnos las demás.',
+    tamano:      'No. Somos dos socios en Las Palmas. Para cada proyecto montamos un equipo con colaboradores especialistas. Si buscas una agencia con 20 personas y oficina en Madrid, no somos nosotros.',
+    ads:         'Porque preferimos certificarnos oficialmente antes de gestionar el dinero publicitario de un cliente. Estamos en ello. Cuando los activemos, los clientes existentes serán los primeros en saberlo.'
+  };
+
+  var botFloatBtn  = document.getElementById('botFloatBtn');
+  var botPopup     = document.getElementById('botPopup');
+  var botCloseBtn  = document.getElementById('botPopupClose');
+  var botBody      = document.getElementById('botPopupBody');
+  var botQuestions = document.getElementById('botQuestions');
+
+  if (botFloatBtn && botPopup) {
+    botFloatBtn.addEventListener('click', function () {
+      var isOpen = botPopup.classList.toggle('open');
+      botFloatBtn.classList.toggle('active', isOpen);
     });
-  });
+
+    botCloseBtn.addEventListener('click', function () {
+      botPopup.classList.remove('open');
+      botFloatBtn.classList.remove('active');
+    });
+
+    document.querySelectorAll('.bot-q-btn').forEach(function (qBtn) {
+      qBtn.addEventListener('click', function () {
+        var key = qBtn.getAttribute('data-q');
+        var answer = ANSWERS[key];
+        var questionText = qBtn.textContent;
+
+        // Hide question list
+        botQuestions.style.display = 'none';
+
+        // User bubble
+        var userBubble = document.createElement('div');
+        userBubble.className = 'bot-bubble user-says';
+        userBubble.textContent = questionText;
+        botBody.appendChild(userBubble);
+        botBody.scrollTop = botBody.scrollHeight;
+
+        // Typing indicator
+        var typing = document.createElement('div');
+        typing.className = 'bot-bubble bot-says';
+        typing.innerHTML = '<span style="opacity:.55;font-size:18px;letter-spacing:3px">···</span>';
+        botBody.appendChild(typing);
+        botBody.scrollTop = botBody.scrollHeight;
+
+        setTimeout(function () {
+          // Replace typing with answer
+          typing.innerHTML = answer;
+
+          // Back button
+          var backBtn = document.createElement('button');
+          backBtn.className = 'bot-q-btn';
+          backBtn.style.marginTop = '6px';
+          backBtn.textContent = '← Ver más preguntas';
+          botBody.appendChild(backBtn);
+          botBody.scrollTop = botBody.scrollHeight;
+
+          backBtn.addEventListener('click', function () {
+            botBody.removeChild(userBubble);
+            botBody.removeChild(typing);
+            botBody.removeChild(backBtn);
+            botQuestions.style.display = 'flex';
+          });
+        }, 700);
+      });
+    });
+  }
 
   // --------------------------------------------------------------------
   // 3. Reveal on scroll
