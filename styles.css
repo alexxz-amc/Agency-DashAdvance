@@ -794,11 +794,42 @@ button { font-family:inherit; cursor:pointer; border:none; background:none; colo
 .footer-bottom a:hover { color:var(--text); }
 
 /* ── WA FLOAT ────────────────────────────────────────────────────────────── */
-.wa-float { position:fixed; bottom:28px; right:28px; width:58px; height:58px; background:#25D366; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 32px -8px rgba(37,211,102,.6); z-index:300; transition:all .4s var(--ease); opacity:0; transform:translateY(24px) scale(.9); pointer-events:none; }
-.wa-float.visible { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; animation:waRing 3s ease infinite; }
-@keyframes waRing { 0%,100%{box-shadow:0 8px 32px -8px rgba(37,211,102,.6),0 0 0 0 rgba(37,211,102,.3);} 50%{box-shadow:0 8px 32px -8px rgba(37,211,102,.6),0 0 0 12px rgba(37,211,102,0);} }
-.wa-float:hover { transform:translateY(-4px) scale(1.08); }
-.wa-float svg { width:28px; height:28px; }
+.wa-float {
+  position: fixed; bottom: 28px; right: 28px;
+  width: 62px; height: 62px;
+  background: linear-gradient(135deg, #F4B400 0%, #D49A00 100%);
+  color: #0B1929;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow:
+    0 8px 32px -8px rgba(var(--accent-rgb),.7),
+    0 0 24px rgba(var(--accent-rgb),.25);
+  z-index: 300;
+  transition: all .4s var(--ease);
+  opacity: 0; transform: translateY(24px) scale(.9);
+  pointer-events: none;
+}
+.wa-float.visible {
+  opacity: 1; transform: translateY(0) scale(1);
+  pointer-events: auto;
+  animation: waGoldPulse 3s ease infinite;
+}
+@keyframes waGoldPulse {
+  0%,100% {
+    box-shadow:
+      0 8px 32px -8px rgba(var(--accent-rgb),.7),
+      0 0 24px rgba(var(--accent-rgb),.25),
+      0 0 0 0 rgba(var(--accent-rgb),.35);
+  }
+  50% {
+    box-shadow:
+      0 8px 32px -8px rgba(var(--accent-rgb),.7),
+      0 0 32px rgba(var(--accent-rgb),.4),
+      0 0 0 16px rgba(var(--accent-rgb),0);
+  }
+}
+.wa-float:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 16px 48px -8px rgba(var(--accent-rgb),.75), 0 0 40px rgba(var(--accent-rgb),.4); }
+.wa-float svg { width: 30px; height: 30px; }
 
 /* ── SCROLL REVEAL ───────────────────────────────────────────────────────── */
 .reveal { opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
