@@ -847,3 +847,164 @@ button { font-family:inherit; cursor:pointer; border:none; background:none; colo
   .loss-card, .win-card { padding:24px; }
   .losses-grid, .wins-grid { grid-template-columns:1fr; }
 }
+
+/* ── BRAND LOGO + NEON TEXT ──────────────────────────────────────────────── */
+.brand-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(var(--accent-rgb),.25));
+}
+
+.brand-neon {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: -.01em;
+  line-height: 1;
+  text-shadow:
+    0 0 6px  rgba(var(--accent-rgb),.75),
+    0 0 20px rgba(var(--accent-rgb),.4),
+    0 0 44px rgba(var(--accent-rgb),.18);
+  animation: neonFlicker 8s infinite;
+  user-select: none;
+}
+
+@keyframes neonFlicker {
+  0%, 88%, 91%, 94%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 6px  rgba(var(--accent-rgb),.75),
+      0 0 20px rgba(var(--accent-rgb),.4),
+      0 0 44px rgba(var(--accent-rgb),.18);
+  }
+  89% { opacity: .18; text-shadow: none; }
+  92% { opacity: .8; text-shadow: 0 0 6px rgba(var(--accent-rgb),.5); }
+  95% { opacity: .35; text-shadow: none; }
+  96% { opacity: 1; }
+}
+
+/* ── WIN PREFIX (+) ──────────────────────────────────────────────────────── */
+.win-prefix {
+  font-size: .55em;
+  font-weight: 700;
+  color: var(--good);
+  vertical-align: super;
+  margin-right: 1px;
+  letter-spacing: 0;
+}
+
+/* ── WA FLOAT BADGE ──────────────────────────────────────────────────────── */
+.wa-float { position: relative; }
+.wa-float-badge {
+  position: absolute;
+  top: -8px; right: -8px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-size: 8px;
+  font-weight: 800;
+  font-family: var(--sans);
+  letter-spacing: .04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 10px rgba(var(--accent-rgb),.5);
+  line-height: 1;
+  z-index: 1;
+}
+
+/* ── PORTRAIT CARDS (founders) ───────────────────────────────────────────── */
+.portrait-placeholder { flex-direction: column; gap: 16px; }
+.portrait-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.portrait-circle.is-blue {
+  background: linear-gradient(145deg,rgba(var(--blue-rgb),.25),rgba(var(--blue-rgb),.08));
+  border-color: rgba(var(--blue-rgb),.3);
+}
+.portrait-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -.01em;
+}
+.portrait-role {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── PROBLEM VISUAL ──────────────────────────────────────────────────────── */
+.problem-visual {
+  margin-top: 72px;
+  display: flex;
+  justify-content: center;
+}
+.illo-commission {
+  width: 100%;
+  max-width: 500px;
+  opacity: .85;
+}
+
+/* ── FILTER FUNNEL ILLO ──────────────────────────────────────────────────── */
+.filter-illo {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  opacity: .7;
+}
+.filter-illo svg {
+  width: 100px;
+  height: auto;
+}
+
+/* ── MARKET CHART ────────────────────────────────────────────────────────── */
+.market-chart-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: -24px auto 64px;
+  max-width: 480px;
+}
+.illo-bars {
+  width: 100%;
+  height: auto;
+  opacity: .9;
+}
+.market-chart-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── BAR CHART ANIMATION ─────────────────────────────────────────────────── */
+.illo-bars rect {
+  transform-origin: bottom;
+  animation: barGrow .9s var(--ease) both;
+}
+.illo-bars rect:nth-child(1) { animation-delay: .05s; }
+.illo-bars rect:nth-child(2) { animation-delay: .12s; }
+.illo-bars rect:nth-child(3) { animation-delay: .19s; }
+.illo-bars rect:nth-child(4) { animation-delay: .26s; }
+.illo-bars rect:nth-child(5) { animation-delay: .33s; }
+.illo-bars rect:nth-child(6) { animation-delay: .40s; }
+.illo-bars rect:nth-child(7) { animation-delay: .47s; }
+
+@keyframes barGrow {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 1; }
+}
