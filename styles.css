@@ -1044,27 +1044,6 @@ button { font-family:inherit; cursor:pointer; border:none; background:none; colo
   letter-spacing: 0;
 }
 
-/* ── WA FLOAT BADGE ──────────────────────────────────────────────────────── */
-.wa-float { position: relative; }
-.wa-float-badge {
-  position: absolute;
-  top: -8px; right: -8px;
-  width: 22px; height: 22px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #000;
-  font-size: 8px;
-  font-weight: 800;
-  font-family: var(--sans);
-  letter-spacing: .04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--bg);
-  box-shadow: 0 0 10px rgba(var(--accent-rgb),.5);
-  line-height: 1;
-  z-index: 1;
-}
 
 /* ── PORTRAIT CARDS (founders) ───────────────────────────────────────────── */
 .portrait-placeholder { flex-direction: column; gap: 16px; }
